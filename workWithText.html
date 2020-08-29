@@ -1,0 +1,21 @@
+<script>
+    let ime = "Univerzitet Singidunum";
+
+    ime = ime.toLocaleUpperCase();
+    ime = ime.replace('Univerzitet', 'University');
+    ime = ime.substr(10);
+    ime = ime.trim();
+
+    console.log(ime);
+
+    let duzinaTeksta = ime.length;
+    console.log(duzinaTeksta);
+
+    let slovoIndeks = 'U'
+    let indeksSlovaU = ime.indexOf(slovoIndeks);
+    console.log(indeksSlovaU);
+
+    let slovoNaIndeksu2 = ime[2];
+    console.log(slovoNaIndeksu2);
+
+</script>

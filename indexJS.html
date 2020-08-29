@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>JS Uvod</title>
+</head>
+<body>
+    <p id="ovaj">prvi paragraf.</p>
+    <p>drugi paragraf.</p>
+
+    <button onclick="promeniParagraf();">
+        promeni
+    </button>
+
+    <script>
+        function promeniParagraf() {
+           let paragraf = document.querySelector('#ovaj')
+
+           paragraf.innerText = "Promenjen tekst."
+           paragraf.style.color = "red"
+           
+           if(paragraf.style.fontSize != "30pt"){
+               paragraf.style.fontSize = "30pt"
+           }else{
+               paragraf.style.fontSize = "15pt"
+           }
+        }
+    </script>
+</body>
+</html>

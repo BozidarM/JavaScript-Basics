@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="input-a" value="0"><br>
+    <input type="number" id="input-b" value="0"><br>
+
+    <p id="res">0</p>
+    <script>
+        function izracunaj(){
+            let a = document.querySelector('#input-a');
+            let b = document.querySelector('#input-b');
+
+            let vrednostA = Number(a.value);  
+            let vrednostB = Number(b.value);
+
+            let r = vrednostA + vrednostB;
+
+
+           let res = document.querySelector('#res');
+
+           res.innerHTML = `Rezultat je <b>${r}</b>!`;
+        }
+
+        function init(){
+            let a = document.querySelector('#input-a');
+            let b = document.querySelector('#input-b');
+
+            a.addEventListener('change', izracunaj);
+            b.addEventListener('change', izracunaj);
+        }
+        window.addEventListener('load', init);
+    </script>
+    
+</body>
+</html>

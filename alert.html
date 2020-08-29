@@ -1,0 +1,27 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf8">
+    <title>Alert</title>
+    <script>
+        function proveri(){
+            email = document.getElementsByTagName('input')[0].value;
+            poruka =
+                email.match(/[a-z0-9\._%+!$&*=^|~#%'`?{}/\-]+@([a-z0-9\-]+\.){1,}([a-z]{2,16})/i)
+                ? 'adresa je ispravana'
+                : 'adresa nije ispravna';
+            alert(poruka);
+
+        } 
+    </script>
+
+</head>
+<body>
+<p>Unesite e mail adresu</p>
+<input>
+ <button onclick = "proveri()">posalji</button>
+ </body>
+ </html>
+

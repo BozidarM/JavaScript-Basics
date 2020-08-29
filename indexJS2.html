@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <p id="poruka"></p>
+
+    <button onmouseover="setujVrednost(1);">
+        jedan
+    </button>
+    <button onmouseover="setujVrednost(2);">
+        dva
+    </button>
+
+    <button onmouseover="setujVrednost(3);">
+        tri
+    </button>
+
+    <button onmouseover="setujVrednost(4);">
+        cetiri
+    </button>
+
+    <script>
+        var poruke = [ "Nista se nije desilo", "Sve je u redu", "Kraj" ]; 
+            
+        function setujVrednost(indeks){
+            let poruka = document.querySelector('#poruka'); 
+            let tekst = poruke[ indeks - 1 ]; 
+
+            if(tekst === undefined){
+                tekst = "Ne postoji taj tekst!";
+            }
+
+            poruka.innerText = tekst;
+        }
+    </script>
+</body>
+</html>
